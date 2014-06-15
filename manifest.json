@@ -1,0 +1,10 @@
+{
+	"name": "CDuran-NewTabExtension",
+	"description": "Beautiful extension created by @durancristhian",
+	"version": "0.1",
+	"incognito": "split",
+	"chrome_url_overrides": {
+		"newtab": "newTab.html"
+	},
+	"manifest_version": 2
+}
