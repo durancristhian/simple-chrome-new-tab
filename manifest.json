@@ -1,10 +1,11 @@
 {
-	"name": "CDuran-NewTabExtension",
-	"description": "Beautiful extension created by @durancristhian",
+	"name": "minimal-new-tab",
+	"description": "minimal-new-tab is a chrome extension created by @durancristhian",
 	"version": "0.1",
 	"incognito": "split",
 	"chrome_url_overrides": {
-		"newtab": "newTab.html"
+		"newtab": "minimal-new-tab.html"
 	},
-	"manifest_version": 2
+	"manifest_version": 2,
+	"icons": { "16": "minimal-new-tab-16.png", "128": "minimal-new-tab-128.png" }
 }
