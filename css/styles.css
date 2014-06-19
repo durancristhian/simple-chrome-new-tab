@@ -1,6 +1,6 @@
 body, html {
 	color: #fff;
-	font-family: 'Lato', sans-serif;
+	font-family: 'lato', sans-serif;
 	font-size: 20px;
 	height: 100%;
 	letter-spacing: 3px;
@@ -17,8 +17,18 @@ p {
 }
 #clock {
 	font-size: 8em;
-	font-weight: bold;
+	font-family: 'lato_bold', sans-serif;
 	letter-spacing: 5px;
+}
+#quote {
+	bottom: 1em;
+	font-size: .75em;
+	left: 1em;
+	position: absolute;
+	right: 1em;
+}
+.italic {
+	font-family: 'lato_italic', sans-serif;
 }
 .main-card {
 	left: 0;
@@ -27,7 +37,7 @@ p {
 	top: 25%;
 }
 .pure-g [class *= "pure-u"] {
-	font-family: 'Lato', sans-serif;
+	font-family: 'lato', sans-serif;
 	letter-spacing: 3px;
 }
 .right {
@@ -35,6 +45,7 @@ p {
 }
 .todo-list {
 	bottom: 1em;
+	display: none;
 	font-size: 16px;
 	position: absolute;
 	right: 1em;
@@ -43,14 +54,13 @@ p {
 }
 .todo-list .header {
 	font-size: 1.5em;
-	font-weight: bold;
+	font-family: 'lato_bold', sans-serif;
 }
 .todo-list .input input {
 	background: none;
 	border: none;
 	border-bottom: 1px solid #bbb;
-	font-family: 'Lato', sans-serif;
-	font-style: italic;
+	font-family: 'lato_italic', sans-serif;
 	letter-spacing: 3px;
 	margin-bottom: 1em;
 	outline: none;
@@ -67,7 +77,7 @@ p {
 }
 .todo-list .items .cell {
 	font-size: 16px;
-	font-style: italic;
+	font-family: 'lato_italic', sans-serif;
 	padding: .5em 0;
 }
 .todo-list .items .cell:hover {

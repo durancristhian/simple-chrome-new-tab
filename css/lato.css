@@ -1,0 +1,43 @@
+@font-face {
+    font-family: 'lato';
+    src: url('../fonts/lato/lato-reg-webfont.eot');
+    src: url('../fonts/lato/lato-reg-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/lato/lato-reg-webfont.woff') format('woff'),
+         url('../fonts/lato/lato-reg-webfont.ttf') format('truetype'),
+         url('../fonts/lato/lato-reg-webfont.svg#latoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'lato_italic';
+    src: url('../fonts/lato/lato-regita-webfont.eot');
+    src: url('../fonts/lato/lato-regita-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/lato/lato-regita-webfont.woff') format('woff'),
+         url('../fonts/lato/lato-regita-webfont.ttf') format('truetype'),
+         url('../fonts/lato/lato-regita-webfont.svg#latoitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'lato_bold';
+    src: url('../fonts/lato/lato-bol-webfont.eot');
+    src: url('../fonts/lato/lato-bol-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/lato/lato-bol-webfont.woff') format('woff'),
+         url('../fonts/lato/lato-bol-webfont.ttf') format('truetype'),
+         url('../fonts/lato/lato-bol-webfont.svg#latobold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'lato_bold_italic';
+    src: url('../fonts/lato/lato-bolita-webfont.eot');
+    src: url('../fonts/lato/lato-bolita-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/lato/lato-bolita-webfont.woff') format('woff'),
+         url('../fonts/lato/lato-bolita-webfont.ttf') format('truetype'),
+         url('../fonts/lato/lato-bolita-webfont.svg#latobold_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

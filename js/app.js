@@ -1,7 +1,10 @@
 $(window).on("load", function () {
 
 	// Animación de entrada
-	$(".wrapper").fadeIn("slow");
+	$(".wrapper").fadeIn("slow", function () {
+
+		$(".todo-list").fadeIn();
+	});
 
 	// Reloj
 	var months = new Array (
@@ -71,19 +74,17 @@ $(window).on("load", function () {
 	}
 
 	// ToDo list
+	var templateStart = "<div class='pure-g item'><div class='pure-u-sm-3-24 cell'><p><span class='icon-checkbox-unchecked icon'></span></p></div><div class='pure-u-sm-18-24 cell'><p class='task'>";
+	var templateEnd = "</p></div><div class='pure-u-sm-3-24 cell right'><p><span class='icon-close icon'></span></p></div></div>";
+
 	var tasks = localStorage.getItem('tasks');
 
-	// Si había tareas en localStorage las asigno
 	if(tasks !== null) {
 
 		$("#items-list").html(tasks);
 		AddToDoListEvents();
 	}
 
-	var templateStart = "<div class='pure-g item'><div class='pure-u-sm-3-24 cell'><p><span class='icon-checkbox-unchecked icon'></span></p></div><div class='pure-u-sm-18-24 cell'><p class='task'>";
-	var templateEnd = "</p></div><div class='pure-u-sm-3-24 cell right'><p><span class='icon-close icon'></span></p></div></div>";
-
-	// Se agrega una nueva tarea
 	$("#input").on("keypress", function (key) {
 
 		if(key.which == 13 && $(this).val() !== "") {
@@ -106,7 +107,23 @@ $(window).on("load", function () {
 		}
 	});
 
-	// Se modifica el estado de un item de la lista
+	function DeleteToDoListEvents () {
+
+		$(".cell:not(.right)").off("click", ChangeTaskStatus);
+		$(".cell.right").off("click", DeleteTask);
+	}
+
+	function AddToDoListEvents () {
+
+		$(".cell:not(.right)").on("click", ChangeTaskStatus);
+		$(".cell.right").on("click", DeleteTask);
+	}
+
+	function UpdateLocalStorageData () {
+
+		localStorage.setItem('tasks', $("#items-list").html());
+	}
+
 	function ChangeTaskStatus (event) {
 
 		event.preventDefault();
@@ -126,7 +143,6 @@ $(window).on("load", function () {
 		UpdateLocalStorageData();
 	}
 
-	// Se elimina una tarea
 	function DeleteTask (event) {
 
 		event.preventDefault();
@@ -139,20 +155,14 @@ $(window).on("load", function () {
 		});
 	}
 
-	function UpdateLocalStorageData () {
+	$("#quote").load("http://www.iheartquotes.com/api/v1/random?format=json", function (data) {
 
-		localStorage.setItem('tasks', $("#items-list").html());
-	}
+		if(data) {
 
-	function DeleteToDoListEvents () {
+			var json = JSON.parse(data);
+			var text = "<span class='italic'>" + json.quote +  "</span>";
 
-		$(".cell:not(.right)").off("click", ChangeTaskStatus);
-		$(".cell.right").off("click", DeleteTask);
-	}
-
-	function AddToDoListEvents () {
-
-		$(".cell:not(.right)").on("click", ChangeTaskStatus);
-		$(".cell.right").on("click", DeleteTask);
-	}
+			$("#quote").html(text).addClass("animated fadeInUp");
+		}
+	});
 });

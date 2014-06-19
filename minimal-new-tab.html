@@ -3,21 +3,22 @@
 <head>
 	<meta charset="UTF-8">
 	<title>minimal-new-tab by @durancristhian</title>
-	<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/grids-responsive-min.css">
 	<link rel="stylesheet" href="css/icons.css">
+	<link rel="stylesheet" href="css/lato.css">
+	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-	<div class="wrapper" style="display: none;">
+	<div class="wrapper">
 		<canvas id="canvasElement"></canvas>
 			<div class="main-card">
 				<p>
-					<span id="clock"></span>
+					<span id="clock" class="animated fadeInDown"></span>
 				</p>
 				<p>
-					<span id="date"></span>
+					<span id="date" class="animated fadeInDown"></span>
 				</p>
 			</div>
 		</div>
@@ -28,6 +29,7 @@
 			</div>
 			<div id="items-list" class="items"></div>
 		</div>
+		<p id="quote"></p>
 	</div>
 	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
 	<script type="text/javascript" src="js/canvas.js"></script>
