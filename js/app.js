@@ -1,11 +1,7 @@
 $(window).on("load", function () {
 
 	// Animación de entrada
-	$(".wrapper").fadeIn("slow", function () {
-
-		$(".main-card").fadeIn("slow");
-		$(".todo-list").fadeIn("slow");
-	});
+	$(".wrapper").fadeIn("slow");
 
 	// Reloj
 	var months = new Array (
@@ -84,8 +80,8 @@ $(window).on("load", function () {
 		AddToDoListEvents();
 	}
 
-	var templateStart = "<div class='pure-g item'><div class='pure-u-sm-3-24 row left'><p><span class='icon-checkbox-unchecked icon'></span></p></div><div class='pure-u-sm-18-24 row'><p class='task'>";
-	var templateEnd = "</p></div><div class='pure-u-sm-3-24 row right'><p><span class='icon-close icon'></span></p></div></div>";
+	var templateStart = "<div class='pure-g item'><div class='pure-u-sm-3-24 cell'><p><span class='icon-checkbox-unchecked icon'></span></p></div><div class='pure-u-sm-18-24 cell'><p class='task'>";
+	var templateEnd = "</p></div><div class='pure-u-sm-3-24 cell right'><p><span class='icon-close icon'></span></p></div></div>";
 
 	// Se agrega una nueva tarea
 	$("#input").on("keypress", function (key) {
@@ -98,7 +94,7 @@ $(window).on("load", function () {
 			var text = $(this).val();
 
 			// Se agrega el elemento
-			$(templateStart + text +templateEnd).hide().appendTo("#items-list").fadeIn();
+			$(templateStart + text +templateEnd).hide().appendTo("#items-list").fadeIn("slow");
 
 			$(this).val("");
 
@@ -135,9 +131,12 @@ $(window).on("load", function () {
 
 		event.preventDefault();
 
-		$(this).closest(".item").remove();
+		$(this).closest(".item").slideUp("fast", function () {
 
-		UpdateLocalStorageData();
+			$(this).remove();
+
+			UpdateLocalStorageData();
+		});
 	}
 
 	function UpdateLocalStorageData () {
@@ -147,13 +146,13 @@ $(window).on("load", function () {
 
 	function DeleteToDoListEvents () {
 
-		$(".row:not(.right)").off("click", ChangeTaskStatus);
-		$(".row.right").off("click", DeleteTask);
+		$(".cell:not(.right)").off("click", ChangeTaskStatus);
+		$(".cell.right").off("click", DeleteTask);
 	}
 
 	function AddToDoListEvents () {
 
-		$(".row:not(.right)").on("click", ChangeTaskStatus);
-		$(".row.right").on("click", DeleteTask);
+		$(".cell:not(.right)").on("click", ChangeTaskStatus);
+		$(".cell.right").on("click", DeleteTask);
 	}
 });

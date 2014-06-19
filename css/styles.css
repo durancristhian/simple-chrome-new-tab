@@ -16,15 +16,14 @@ p {
 	margin-top: 0;
 }
 #clock {
-	font-size: 7.5em;
+	font-size: 8em;
 	font-weight: bold;
-}
-.left {
-	text-align: left;
+	letter-spacing: 5px;
 }
 .main-card {
-	left: 35%;
+	left: 0;
 	position: absolute;
+	right: 0;
 	top: 25%;
 }
 .pure-g [class *= "pure-u"] {
@@ -36,8 +35,7 @@ p {
 }
 .todo-list {
 	bottom: 1em;
-	font-size: .8em;
-	font-style: italic;
+	font-size: 16px;
 	position: absolute;
 	right: 1em;
 	top: 1em;
@@ -52,7 +50,8 @@ p {
 	border: none;
 	border-bottom: 1px solid #bbb;
 	font-family: 'Lato', sans-serif;
-	letter-spacing: 2px;
+	font-style: italic;
+	letter-spacing: 3px;
 	margin-bottom: 1em;
 	outline: none;
 	padding-bottom: .25em;
@@ -66,26 +65,27 @@ p {
 .todo-list .items .item.clicked .task {
 	text-decoration: line-through;
 }
-.todo-list .items .row {
-	font-size: 15px;
+.todo-list .items .cell {
+	font-size: 16px;
+	font-style: italic;
 	padding: .5em 0;
 }
-.todo-list .items .row:hover {
+.todo-list .items .cell:hover {
 	cursor: pointer;
 }
-.todo-list .items .row:hover {
+.todo-list .items .cell:hover {
 	cursor: pointer;
 	display: inline-block;
 }
-.todo-list .items .row p {
+.todo-list .items .cell p {
 	margin: 0;
-	letter-spacing: 2px;
+	letter-spacing: 3px;
 }
-.todo-list .items .row .icon {
+.todo-list .items .cell .icon {
 	display: inline-block;
 	margin-top: 3px;
 }
-.todo-list .items .row .icon.hidden {
+.todo-list .items .cell .icon.hidden {
 	display: none;
 }
 .wrapper {
