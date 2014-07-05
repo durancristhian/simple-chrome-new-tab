@@ -8,5 +8,8 @@
 	},
 	"manifest_version": 2,
 	"icons": { "16": "images/minimal-new-tab-16.png", "128": "images/minimal-new-tab-128.png" },
-	"permissions": ["http://www.iheartquotes.com/api/v1/random?format=json"]
+	"permissions": [
+		"topSites",
+		"http://www.iheartquotes.com/api/v1/random?format=json"
+	]
 }

@@ -4,6 +4,7 @@ $(window).on("load", function () {
 	$(".wrapper").fadeIn("slow", function () {
 
 		$(".todo-list").fadeIn();
+		$(".top-sites").fadeIn();
 	});
 
 	// Reloj
@@ -82,6 +83,7 @@ $(window).on("load", function () {
 	if(tasks !== null) {
 
 		$("#items-list").html(tasks);
+		$("#items-list .item").css("opacity", 1);
 		AddToDoListEvents();
 	}
 
@@ -155,7 +157,7 @@ $(window).on("load", function () {
 		});
 	}
 
-	$("#quote").load("http://www.iheartquotes.com/api/v1/random?format=json", function (data) {
+	$("#quote").load("http://www.iheartquotes.com/api/v1/random?max_lines=1&format=json", function (data) {
 
 		if(data) {
 
@@ -164,5 +166,22 @@ $(window).on("load", function () {
 
 			$("#quote").html(text).addClass("animated fadeInUp");
 		}
+	});
+
+	chrome.topSites.get(function (MostVisitedURLs) {
+
+		var html = "";
+		var count = 0;
+
+		$.grep(MostVisitedURLs, function (site) {
+
+			if(count < 9) {
+
+				html = html + "<a href='" + site.url + "' target='_blank' class='italic'>" + site.title + "</a>";
+				count ++;
+			}
+		});
+
+		$(html).hide().appendTo("#sites-list").fadeIn();
 	});
 });

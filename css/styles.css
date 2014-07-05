@@ -27,6 +27,10 @@ p {
 	position: absolute;
 	right: 1em;
 }
+.header {
+	font-size: 1.5em;
+	font-family: 'lato_bold', sans-serif;
+}
 .italic {
 	font-family: 'lato_italic', sans-serif;
 }
@@ -50,11 +54,7 @@ p {
 	position: absolute;
 	right: 1em;
 	top: 1em;
-	width: 250px;
-}
-.todo-list .header {
-	font-size: 1.5em;
-	font-family: 'lato_bold', sans-serif;
+	width: 275px;
 }
 .todo-list .input input {
 	background: none;
@@ -88,8 +88,9 @@ p {
 	display: inline-block;
 }
 .todo-list .items .cell p {
-	margin: 0;
 	letter-spacing: 3px;
+	margin: 0;
+	word-break: break-all;
 }
 .todo-list .items .cell .icon {
 	display: inline-block;
@@ -97,6 +98,21 @@ p {
 }
 .todo-list .items .cell .icon.hidden {
 	display: none;
+}
+.top-sites {
+	bottom: 1em;
+	display: none;
+	font-size: 16px;
+	left: 1em;
+	position: absolute;
+	top: 1em;
+	width: 275px;
+}
+.top-sites a {
+	color: #fff;
+	display: block;
+	margin: 1em 0;
+	text-align: left;
 }
 .wrapper {
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1a3742), color-stop(100%,#9ea183));
