@@ -168,20 +168,20 @@ $(window).on("load", function () {
 		}
 	});
 
-	chrome.topSites.get(function (MostVisitedURLs) {
+	// chrome.topSites.get(function (MostVisitedURLs) {
 
-		var html = "";
-		var count = 0;
+	// 	var html = "";
+	// 	var count = 0;
 
-		$.grep(MostVisitedURLs, function (site) {
+	// 	$.grep(MostVisitedURLs, function (site) {
 
-			if(count < 9) {
+	// 		if(count < 9) {
 
-				html = html + "<a href='" + site.url + "' target='_blank' class='italic'>" + site.title + "</a>";
-				count ++;
-			}
-		});
+	// 			html = html + "<a href='" + site.url + "' target='_blank' class='italic'>" + site.title + "</a>";
+	// 			count ++;
+	// 		}
+	// 	});
 
-		$(html).hide().appendTo("#sites-list").fadeIn();
-	});
+	// 	$(html).hide().appendTo("#sites-list").fadeIn();
+	// });
 });

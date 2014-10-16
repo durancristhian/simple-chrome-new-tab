@@ -99,7 +99,7 @@ p {
 .todo-list .items .cell .icon.hidden {
 	display: none;
 }
-.top-sites {
+/*.top-sites {
 	bottom: 1em;
 	display: none;
 	font-size: 16px;
@@ -113,7 +113,7 @@ p {
 	display: block;
 	margin: 1em 0;
 	text-align: left;
-}
+}*/
 .wrapper {
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1a3742), color-stop(100%,#9ea183));
 	background: -webkit-linear-gradient(top, #1a3742 0%,#9ea183 100%);
