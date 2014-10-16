@@ -1,7 +1,7 @@
 chrome-extension
 ----------
 
-> My first chrome extension <br>
+> minimal-new-tab is a chrome extension created by @durancristhian <br>
 > [minimal-new-tab](https://chrome.google.com/webstore/detail/minimal-new-tab/nljoaafhkenagpclofihfbfhkhddhdlk?utm_source=chrome-ntp-icon)
 
 Screenshot
