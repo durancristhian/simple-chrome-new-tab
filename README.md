@@ -6,7 +6,7 @@ chrome-extension
 
 Screenshot
 ----------
-![MUG](https://raw.githubusercontent.com/durancristhian/chrome-extension/master/screenshots/website.png)
+![chrome-extension](https://raw.githubusercontent.com/durancristhian/chrome-extension/master/screenshots/website.png)
 
 License
 ----------
