@@ -1,13 +1,21 @@
-chrome-extension
-----------
+# simple-chrome-new-tab
 
-> [minimal-new-tab](https://chrome.google.com/webstore/detail/minimal-new-tab/nljoaafhkenagpclofihfbfhkhddhdlk?utm_source=chrome-ntp-icon) is a chrome extension created by @durancristhian <br>
+***(FINISHED)*** :bulb: Replacement of the new tab for Google Chrome
 
-Screenshot
-----------
-![chrome-extension](https://raw.githubusercontent.com/durancristhian/chrome-extension/master/screenshots/website.png)
+## Download
 
-License
-----------
-Licensed under the MIT license.
-Copyright (c) 2014 [@durancristhian](https://twitter.com/DuranCristhian)
+[simple-chrome-new-tab](https://chrome.google.com/webstore/detail/minimal-new-tab/nljoaafhkenagpclofihfbfhkhddhdlk)
+
+## Screenshots
+
+> Because we all love the screenshots
+
+![simple-chrome-new-tab](https://raw.githubusercontent.com/durancristhian/simple-chrome-new-tab/master/screenshots/simple-chrome-new-tab.png)
+
+## Contributing
+
+No restriction at all. Feel free to contribute with whatever you want.
+
+## License
+
+MIT
