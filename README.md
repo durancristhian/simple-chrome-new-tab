@@ -1,6 +1,6 @@
 # simple-chrome-new-tab
 
-***(FINISHED)*** :bulb: Replacement of the new tab for Google Chrome
+:bulb: Replacement of the new tab for Google Chrome
 
 ## Download
 
